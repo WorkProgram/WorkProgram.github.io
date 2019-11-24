@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles-work.css" />
+    <script src="script-work.js"></script>
+  </head>
+  <body>
+
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'divTo-Do')">To-Do</button>
+    <button class="tablinks" onclick="openTab(event, 'divInput')">Input</button>
+    <button class="tablinks" onclick="openTab(event, 'divOutput')">Output</button>
+  </div>
+
+  <div id="divTo-Do" class="tabcontent">
+    <div id="staticTo-Do">
+      <h3>To-Do</h3>
+
+      <ul id="myUL">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+      </ul>
+
+      <script>
+      //Todo ul cross off
+      var list = document.querySelector('ul');
+      list.addEventListener('click', function(ev) {
+        if (ev.target.tagName === 'LI') {
+          ev.target.classList.toggle('checked');
+        }
+      }, false);
+      </script>
+    </div>
+  </div>
+
+  <div id="divInput" class="tabcontent">
+    <h3>Cut Fruit</h3>
+    <div id="InputArrayCutFruit" class="InputArray">
+      <ul>
+
+
+        <li><input type="text" id="Pineapple Chunks (Sm)"> Pineapple Chunks <span class="sizeSm">(Sm)</span></li>
+        <li><input type="text" id="Cored Whole Pineapple"> Cored Whole Pineapple</li>
+        <li><input type="text" id="Greek Yogurt Bowl Strawberry"> Greek Yogurt Bowl Strawberry</li>
+        <li><input type="text" id="Greek Yogurt Bowl Banana"> Greek Yogurt Bowl Banana</li>
+        <li><input type="text" id="Greek Yogurt Mixed Berry"> Greek Yogurt Mixed Berry</li>
+        <li><input type="text" id="Yogurt Bowl Strawberry"> Yogurt Bowl Strawberry</li>
+        <li><input type="text" id="Yogurt Bowl Banana"> Yogurt Bowl Banana</li>
+        <li><input type="text" id="Yogurt Bowl Mixed Berry"> Yogurt Bowl Mixed Berry</li>
+        <br></br>
+        <hr>
+        <br></br>
+        <li><input type="text" id="Seedless Watermelon Chunks (Sm)"> Seedless Watermelon Chunks <span class="sizeSm">(Sm)</span></li>
+        <li><input type="text" id="Mixed Fruit Salad (Sm)"> Mixed Fruit Salad <span class="sizeSm">(Sm)</span></li>
+        <li><input type="text" id="Melon Mania (Sm)"> Melon Mania <span class="sizeSm">(Sm)</span></li>
+        <li><input type="text" id="Honeydew Chunks (Sm)"> Honeydew Chunks <span class="sizeSm">(Sm)</span></li>
+        <li><input type="text" id="Cantaloupe Chunks (Sm)"> Cantaloupe Chunks <span class="sizeSm">(Sm)</span></li>
+        <li><input type="text" id="Melon & Strawberry (Sm)"> Melon & Strawberry <span class="sizeSm">(Sm)</span></li>
+        <li><input type="text" id="Mixed Berry Bowl (Sm)"> Mixed Berry Bowl <span class="sizeSm">(Sm)</span></li>
+        <li><input type="text" id="Pineapple & Strawberry (Sm)"> Pineapple & Strawberry <span class="sizeSm">(Sm)</span></li>
+        <li><input type="text" id="Strawberries Sliced (Sm)"> Strawberries Sliced <span class="sizeSm">(Sm)</span></li>
+        <br></br>
+        <hr>
+        <br></br>
+        <li><input type="text" id="Seedless Watermelon Chunks (Lg)"> Seedless Watermelon Chunks <span class="sizeLg">(Lg)</span></li>
+        <li><input type="text" id="Melon Mania (Lg)"> Melon Mania <span class="sizeLg">(Lg)</span></li>
+        <li><input type="text" id="Mixed Fruit Salad (Lg)"> Mixed Fruit Salad <span class="sizeLg">(Lg)</span></li>
+        <li><input type="text" id="Tropical Fruit Salad (Lg)"> Tropical Fruit Salad <span class="sizeLg">(Lg)</span></li>
+        <li><input type="text" id="Pineapple & Strawberry (Lg)"> Pineapple & Strawberry <span class="sizeLg">(Lg)</span></li>
+        <br></br>
+        <hr>
+        <br></br>
+        <li><input type="text" id="Watermelon Slices"> Watermelon Slices</li>
+        <li><input type="text" id="Watermelon Quarters"> Watermelon Quarters</li>
+        <li><input type="text" id="Honeydew Slices"> Honeydew Slices</li>
+        <li><input type="text" id="Cantaloupe Silces"> Cantaloupe Silces</li>
+        <br></br>
+        <hr>
+        <br></br>
+        <li><input type="text" id="Fruit Tray Grab N Go (Lrgst)"> Fruit Tray Grab N Go <span class ="sizeLrgst">(Lrgst)</span></li>
+        <li><input type="text" id="Celebration Fruit Carousel (Lg)"> Celebration Fruit Carousel <span class="sizeLg">(Lg)</span></li>
+        <li><button onclick="compile()"><span style="font-size:20px;">Generate</span></button></li>
+        <br></br>
+        <br></br>
+      </ul>
+    </div>
+    <h3>Salads</h3>
+    <div id="InputArraySalads" class="InputArray">
+      <ul>
+
+        <li><input type="text" id="Egg & Baby Spinach (Lg)"> Egg & Baby Spinach <span class="sizeLg">(Lg)</span></li>
+        <li><input type="text" id="Fruit & Baby Spinach (Lg)"> Fruit & Baby Spinach <span class="sizeLg">(Lg)</span></li>
+        <li><input type="text" id="Baby Kale Salad w/Fruit (Lg)"> Baby Kale Salad w/Fruit <span class="sizeLg">(Lg)</span></li>
+        <li><input type="text" id="Kale Caesar Salad (Lg)"> Kale Caesar Salad <span class="sizeLg">(Lg)</span></li>
+        <br></br>
+        <hr>
+        <br></br>
+        <li><input type="text" id="Mango Salsa (Sm)"> Mango Salsa <span class="sizeSm">(Sm)</span></li>
+        <li><input type="text" id="Pineapple Salsa (Sm)"> Pineapple Salsa <span class="sizeSm">(Sm)</span></li>
+        <li><input type="text" id="Guacamole Dip (Sm)"> Guacamole Dip <span class="sizeSm">(Sm)</span></li>
+        <li><input type="text" id="Taco Dip (Sm)"> Taco Dip <span class="sizeSm">(Sm)</span></li>
+        <li><input type="text" id="Celery Sliced (Sm)"> Celery Sliced <spam class="sizeSm">(Sm)</span></li>
+        <li><input type="text" id="Omlette Mix (Sm)"> Omlette Mix <span class="sizeSm">(Sm)</span></li>
+        <li><input type="text" id="Lunch Pack (Lg)"> Lunch Pack <span class="sizeLg">(Lg)</span></li>
+        <br></br>
+        <hr>
+        <br></br>
+        <li><input type="text" id="Asian Vegetable Mix (Lg)"> Asian Vegetable Mix <span class="sizeLg">(Lg)</span></li>
+        <li><input type="text" id="Veggie Stir Fry Mix (Lg)"> Veggie Stir Fry Mix <span class="sizeLg">(Lg)</span></li>
+        <li><input type="text" id="Chicken Stir Fry Mix (Lg)"> Chicken Stir Fry Mix <span class="sizeLg">(Lg)</span></li>
+        <li><input type="text" id="Sliced Bell Pepper Mix (Lg)"> Sliced Bell Pepper Mix <span class="sizeLg">(Lg)</span></li>
+        <li><input type="text" id="Tomato & Cucumber Salad w/Feta (Lg)"> Tomato & Cucumber Salad w/Feta <span class="sizeLg">(Lg)</span></li>
+        <li><input type="text" id="Greek Salad (Lg)"> Greek Salad <span class="sizeLg">(Lg)</span></li>
+        <br></br>
+        <hr>
+        <br></br>
+        <li><input type="text" id="Ceasar Salad (Lrgst)"> Ceasar Salad <span class ="sizeLrgst">(Lrgst)</span></li>
+        <li><input type="text" id="Greek Salad (Lrgst)"> Greek Salad (Lrgst)</li>
+        <li><input type="text" id="Garden Salad (Lrgst)"> Garden Salad <span class ="sizeLrgst">(Lrgst)</span></li>
+        <li><input type="text" id="Salad Simply Garden (Lrgst)"> Salad Simply Garden <span class ="sizeLrgst">(Lrgst)</span></li>
+        <li><input type="text" id="Fruit & Baby Spinach (Lrgst)"> Fruit & Baby Spinach <span class ="sizeLrgst">(Lrgst)</span></li>
+        <br></br>
+        <hr>
+        <br></br>
+        <li><input type="text" id="Vegetable Tray Grab N Go (Lrgst)"> Vegetable Tray Grab N Go <span class ="sizeLrgst">(Lrgst)</span></li>
+        <li><input type="text" id="Celebration Vegetable Carousel (Lg)"> Celebration Vegetable Carousel <span class="sizeLg">(Lg)</span></li>
+        <br></br>
+        <hr>
+        <hr>
+        <hr>
+        <br></br>
+        <li><input type="text" id="Original Crunch Mix (Lg)"> Original Crunch Mix <span class="sizeLg">(Lg)</span></li>
+        <li><input type="text" id="Carrot & Celery Crunch w/Dip (Lg)"> Carrot & Celery Crunch w/Dip <span class="sizeLg">(Lg)</span></li>
+        <li><input type="text" id="Crunch Mix Deluxe (Lg)"> Crunch Mix Deluxe <span class="sizeLg">(Lg)</span></li>
+        <li><input type="text" id="Broccoli/Cauliflower/Carrot (Lg)"> Broccoli/Cauliflower/Carrot <span class="sizeLg">(Lg)</span></li>
+        <li><input type="text" id="Arugula & Boccocini Salad (Lg)"> Arugula & Boccocini Salad <span class="sizeLg">(Lg)</span></li>
+        <li><input type="text" id="Arugula Pear & Goat Cheese (Lg)"> Arugula Pear & Goat Cheese <span class="sizeLg">(Lg)</span></li>
+        <br></br>
+        <hr>
+        <br></br>
+        <li><input type="text" id="Caeser Salad (Lg)"> Caeser Salad <span class="sizeLg">(Lg)</span></li>
+        <li><input type="text" id="Simply Garden Salad (Lg)"> Simply Garden Salad <span class="sizeLg">(Lg)</span></li>
+        <li><input type="text" id="Garden Salad (Lg)"> Garden Salad <span class="sizeLg">(Lg)</span></li>
+        <li><input type="text" id="Cheddar Garden Salad (Lg)"> Cheddar Garden Salad <span class="sizeLg">(Lg)</span></li>
+        <li><input type="text" id="Spring Mix Salad (Lg)"> Spring Mix Salad <span class="sizeLg">(Lg)</span></li>
+        <li><input type="text" id="Mandarin Chicken Salad (Lg)"> Mandarin Chicken Salad <span class="sizeLg">(Lg)</span></li>
+        <br></br>
+        <hr>
+        <br></br>
+        <li><input type="text" id="Chicken Caeser Salad (Lrgst)"> Chicken Caeser Salad <span class="sizeLrgst">(Lrgst)</span></li>
+        <li><input type="text" id="Chicken Caeser Salad (Lg)"> Chicken Caeser Salad <span class="sizeLg">(Lg)</span></li>
+        <li><input type="text" id="Chicken Greek Salad (Lg)"> Chicken Greek Salad <span class="sizeLg">(Lg)</span></li>
+        <li><input type="text" id="Chicken Spring Mix (Lg)"> Chicken Spring Mix <span class="sizeLg">(Lg)</span></li>
+        <li><input type="text" id="Muskoka Chicken Salad (Lg)"> Muskoka Chicken Salad <span class="sizeLg">(Lg)</span></li>
+        <li><input type="text" id="Cobb Salad (Lg)"> Cobb Salad <span class="sizeLg">(Lg)</span></li>
+        <br></br>
+        <hr>
+        <br></br>
+        <li><input type="text" id="Butternut Squash Cubes (Grill)"> Butternut Squash Cubes (Grill)</li>
+        <li><input type="text" id="Mixed Petite Potato (Grill)"> Mini Red & White Potato (Grill)</li>
+        <li><input type="text" id="Yam Medallion (Grill)"> Yam Medallion (Grill)</li>
+        <li><input type="text" id="Mushroom (Grill)"> Mushroom (Grill)</li>
+        <li><input type="text" id="BBQ Saute Pepper Medley (Grill)"> BBQ Saute Pepper Medley (Grill)</li>
+        <li><input type="text" id="Asparagus (Grill)"> Asparagus (Grill)</li>
+        <li><button onclick="compile()"><span style="font-size:20px;">Generate</span></button></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="divOutput" class="tabcontent">
+
+    <div class="subtab">
+      <button class="subtablinks" onclick="opensubTab(event, 'divIngredient')">Ingredient List</button>
+      <button class="subtablinks" onclick="opensubTab(event, 'divRecipes')">Recipes</button>
+      <button class="subtablinks" onclick="opensubTab(event, 'divIdealOrder')">Ideal Order</button>
+    </div>
+
+    <h3>Output</h3>
+
+    <div id="divIngredient" class="subtabcontent">
+      <h3>Ingredient List</h3>
+      <ul id="DisplayList"></ul>
+
+    </div>
+    <div id="divRecipes" class="subtabcontent">
+      <h3>Recipes</h3>
+      <ul id="Recipes"></ul>
+
+    </div>
+    <div id="divIdealOrder" class="subtabcontent">
+      <h3>Ideal Order</h3>
+      <ul id="IdealOrder"></ul>
+
+    </div>
+  </div>
+
+</html>
